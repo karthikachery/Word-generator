@@ -1,0 +1,20 @@
+<div class="container text-center mt-5 w-50">
+    <h1 class="text-white m-5 text-center">
+        Word Limit: {{limit}}
+    </h1>
+
+    <input type="range" class="slider foam-control-range" min="1" max="50" id="customRange2"
+     value="{{limit}}"
+     (change)="handleSlider($event.target.value)">
+    <button type="button" class="btn btn-info" (click)="generateWord()">Generate Word</button> 
+    
+    <button type="button" class="btn btn-info" (click)="generateCountry()">Country</button> 
+ 
+    <div *ngIf="word" class="card card-body ">
+        <p class="fw-bold">
+            {{word}}
+        </p>
+    </div>
+</div>
+
+
